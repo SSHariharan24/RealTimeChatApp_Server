@@ -15,7 +15,7 @@ app.use(cookieParser())
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://chatty-app-psi.vercel.app/"
+  "https://chatty-app-psi.vercel.app"
 ];
 
 app.use(cors({
@@ -36,14 +36,6 @@ const __dirname = path.resolve();
 app.use("/api/auth",authRoutes)
 app.use("/api/message",messageRoutes)
 
-
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "../client/dist")));
-  
-    app.get("*", (req, res) => {
-      res.sendFile(path.join(__dirname, "../client", "dist", "index.html"));
-    });
-  }
 
 server.listen(PORT,()=>{
     console.log(`server is running on port ${PORT}`);   
