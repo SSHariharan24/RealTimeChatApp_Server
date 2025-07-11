@@ -9,7 +9,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://real-time-chatapp-mu.vercel.app"
+      "https://chatty-app-psi.vercel.app/"
     ],
     methods: ["GET", "POST"],
     credentials: true

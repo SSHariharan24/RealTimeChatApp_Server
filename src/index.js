@@ -15,7 +15,7 @@ app.use(cookieParser())
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://real-time-chatapp-mu.vercel.app"
+  "https://chatty-app-psi.vercel.app/"
 ];
 
 app.use(cors({
